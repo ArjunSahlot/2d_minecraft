@@ -1,2 +1,2 @@
-# pygame_template
-A template repository that you can use.
+# 2d_minecraft
+2 dimensional minecraft
