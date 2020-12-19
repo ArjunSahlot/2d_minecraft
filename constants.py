@@ -1,4 +1,6 @@
-WIDTH, HEIGHT = 900, 600
+import os
+
+WIDTH, HEIGHT = 1800, 1000
 
 FPS = 90
 
@@ -9,3 +11,6 @@ BLUE = (0, 0, 255)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREY = (128, 128, 128)
+
+PARDIR = os.path.realpath(os.path.dirname(__file__))
+BLOCK_SIZE = 50
