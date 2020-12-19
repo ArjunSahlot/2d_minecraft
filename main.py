@@ -8,7 +8,7 @@ WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("2D Minecraft")
 
 
-def main(window, width, height):
+def main(window):
     pygame.init()
     clock = pygame.time.Clock()
     world = World()
@@ -25,4 +25,4 @@ def main(window, width, height):
         pygame.display.update()
 
 
-main(WINDOW, WIDTH, HEIGHT)
+main(WINDOW)
