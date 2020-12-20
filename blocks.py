@@ -5,8 +5,8 @@ import numpy as np
 
 
 class Block:
-    def __init__(self, row, col):
-        self.row, self.col = row, col
+    def __init__(self, x, y):
+        self.x, self.y = x, y
         self.image = pygame.image.load(os.path.join(PARDIR, "blocks", self.img_name + ".png"))
         self.image = pygame.transform.scale(self.image, (BLOCK_SIZE, BLOCK_SIZE))
     
@@ -14,9 +14,9 @@ class Block:
         self.draw(window, view)
     
     def draw(self, window, view):
-        loc = (WIDTH/2 + BLOCK_SIZE * self.col, HEIGHT/2 + BLOCK_SIZE * self.row) + np.array(view)
+        loc = (WIDTH/2 + BLOCK_SIZE * self.x, HEIGHT/2 + BLOCK_SIZE * self.y) - np.array(view)
 
-        if loc[0] >= 0 and loc[0] + BLOCK_SIZE <= WIDTH and loc[1] >= 0 and loc[1] + BLOCK_SIZE <= HEIGHT:
+        if loc[0] + BLOCK_SIZE >= 0 and loc[0] <= WIDTH and loc[1] + BLOCK_SIZE >= 0 and loc[1] <= HEIGHT:
             window.blit(self.image, loc)
 
 
