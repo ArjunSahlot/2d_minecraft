@@ -16,12 +16,17 @@ class Block:
     def draw(self, window, view):
         loc = (WIDTH/2 + BLOCK_SIZE * self.col, HEIGHT/2 + BLOCK_SIZE * self.row) + np.array(view)
 
-        if loc[0] > 0 and loc[0] + BLOCK_SIZE < WIDTH and loc[1] > 0 and loc[1] + BLOCK_SIZE < HEIGHT:
+        if loc[0] >= 0 and loc[0] + BLOCK_SIZE <= WIDTH and loc[1] >= 0 and loc[1] + BLOCK_SIZE <= HEIGHT:
             window.blit(self.image, loc)
 
 
 class Dirt(Block):
     img_name = "dirt"
+
+
+class Grass(Block):
+    img_name = "grass"
+
 
 class Stone(Block):
     img_name = "stone"

@@ -15,7 +15,7 @@ def main(window):
 
     while True:
         clock.tick(FPS)
-        window.fill(WHITE)
+        window.fill(BLACK)
         events = pygame.event.get()
         world.update(window, events)
         for event in events:

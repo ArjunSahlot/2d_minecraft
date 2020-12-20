@@ -17,10 +17,10 @@ class World:
         if self.seed is not None:
             random.seed(self.seed)
         
-        self.blocks = [Dirt(18, y) for y in range(-18, 18)]
+        self.blocks = [Grass(5, x) for x in range(-18, 18)]
 
     def update(self, window, events):
-        self.player.update(window, self.view, events, self.blocks)
+        # self.player.update(window, self.view, events, self.blocks)
         for block in self.blocks:
             block.update(window, self.view)
         
